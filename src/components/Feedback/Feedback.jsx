@@ -7,11 +7,11 @@ export function Feedback({
   return (
     <>
       <ul className={s.decor}>
-        <li>good:{good}</li>
-        <li>neutral:{neutral}</li>
-        <li>bad:{bad}</li>
-        <li>totalFeedback:{totalFeedback}</li>
-        <li>positive:{goodFeedback}%</li>
+        <li>Good:{good}</li>
+        <li>Neutral:{neutral}</li>
+        <li>Bad:{bad}</li>
+        <li>Total:{totalFeedback}</li>
+        <li>Positive:{goodFeedback}%</li>
       </ul>
     </>
   );

@@ -3,7 +3,8 @@ import s from './Options.module.css';
 export const Options = ({ 
   valueOption, 
   handleReset, 
-  handleOnClick 
+  handleOnClick, 
+  feedbackCount 
 }) => {
   return (
     <ul className={s.decor}>
@@ -34,11 +35,13 @@ export const Options = ({
           {valueOption.bad}
         </button>
       </li>
-      <li>
-        <button className={s.decorBTN} onClick={handleReset} type="button">
-          {valueOption.reset}
-        </button>
-      </li>
+      {feedbackCount > 0 && (
+        <li>
+          <button className={s.decorBTN} onClick={handleReset} type="button">
+            {valueOption.reset}
+          </button>
+        </li>
+      )}
     </ul>
   );
 };
